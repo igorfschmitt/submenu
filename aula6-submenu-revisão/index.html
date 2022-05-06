@@ -1,0 +1,273 @@
+<html>
+<head>
+	<title>Submenu</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+    /* configurações padrões. Para deixar alinhado e sem lista */
+        ul.menu,
+        .menu li,
+        .menu a{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            text-decoration: none;
+        }
+        ul.menu ul{
+            position: absolute;
+            display: none;
+            box-shadow: 3px 3px 2px #333;
+        }
+        
+        /* Configurações nivel 1, para colocar lado a lado e espaçamentos */ 
+        ul.menu{
+            float: left;
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 15px;
+            border-radius: 5px;
+            padding: 0 5px;
+        }
+        .menu li{
+            float: left;
+            width: auto;
+            position: relative;
+        }
+        .menu li a{
+            display: block;
+            padding: 0 20px;
+            line-height: 45px;
+            height: 45px;
+            float: left;
+            transition: all 0.1 linear;
+        }
+        
+        /* Configurações nível 2, para sub menu 1 aparecer só no hover e esconder o ultimo submenu */
+        .menu li:hover > ul.submenu-1{
+            display: block;
+            top: 45px;
+            left: 0;
+            padding: 5px;
+            width: 200px;
+            border-radius: 0 0 5px 5px;
+        }
+        .menu ul.submenu-1 a{
+            width: 160px;
+            padding: 0 20px;
+            border-radius: 5px;
+        }
+        
+        /* Configurações nivel 2 para sub menu 2 aparecer só no hover e conf a tag a */
+        .menu li:hover > ul.submenu-2{
+            display: block;
+            top: 0; left: 195px;
+            padding: 5px;
+            width: 200px;
+            border-radius: 0 5px 5px px;
+        }
+        .menu ul.submenu-2 a{
+            width: 160px;
+            padding: 0 20px;
+            border-radius: 5px;
+        }
+        
+        /* configurações nivel 3 para sub menu 3 aparecer só no hover e conf a tag a */
+        .menu li:hover > ul.submenu-3{
+            display: block; top: 0;
+            left: 195px;
+            padding: 5px;
+            width: 200px;
+            border-radius: 0 5px 5px 5px;
+        }
+        .menu ul.submenu-3 a{
+            width: 160px;
+            padding: 0 20px;
+            border-radius: 5px;
+        }
+        
+        /* configuração de cores */
+        /* nivel 1 */
+        .menu{
+            width: 100%;
+            background: #ccc;
+        }
+        .menu a{
+            color: #000;
+        }
+        .menu li:hover > a{
+            background: #999;
+            color: #fff;
+        }
+        
+        /* nivel 2 */
+        .submenu-1{
+            background: #999;
+        }
+        .submenu-1 a{
+            color: #fff;
+        }
+        .submenu-1 li:hover > a{
+            background: #666;
+        }
+        
+        /* nivel 3 */
+        .submenu-2{
+            background: #666;
+        }
+        .submenu-2 a{
+            color: #fff;
+        }
+        .submenu-2 li:hover > a{
+            background: #333;
+        }
+        
+        /* menu 3 */
+        .submenu-3{
+            background: #333;
+        }
+        .submenu-3 a{
+            color: #fff;
+        }
+        .submenu-3 li:hover > a{
+            background: #000;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+	<ul class="menu">
+		<li><a href="#">Clássica</a>
+            <ul class="submenu-1">
+				<li><a href="#">Platão</a>
+                    <ul class="submenu-2">
+                        <li><a href="https://www.amazon.com.br/Mito-Caverna-Livro-Bolso/dp/8572839410/ref=asc_df_8572839410/?tag=googleshopp00-20&linkCode=df0&hvadid=379721139280&hvpos=&hvnetw=g&hvrand=4122490258014514995&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9102240&hvtargid=pla-813043346061&psc=1">Mito da caverna</a></li>
+                        <li><a href="https://www.amazon.com.br/gp/product/8581862535/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i1">A república</a></li>
+                        <li><a href="https://www.amazon.com.br/gp/product/8572838260/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i2">O Banquete</a>
+                    </ul>  
+                </li>
+				<li><a href="#">Aristóteles</a>
+                    <ul class="submenu-2">
+                        <li><a href="https://www.amazon.com.br/gp/product/8573266058/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i0">Poética</a></li>
+                        <li><a href="https://www.amazon.com.br/gp/product/8572838813/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i1">Ética a Nicômaco</a></li>
+                        <li><a href="https://www.amazon.com.br/gp/product/8572837469/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i2">Retórica</a>
+                    </ul> 
+                </li>
+                    
+            </ul>
+		<li><a href="#">Helenística</a>
+			<ul class="submenu-1">
+				<li><a href="#">Cícero</a>
+                    <ul class="submenu-2">
+						<li><a href="https://www.amazon.com.br/gp/product/8525407178/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i0">Saber envelhecer...</a></li>
+						<li><a href="https://www.amazon.com.br/gp/product/0674992350/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i1">On the Republic...</a></li>
+						<li><a href="https://www.amazon.com.br/gp/product/0674994442/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i3">Rhetorica Ad...</a>
+						</li>
+					</ul>
+                </li>
+				<li><a href="#">Marco Aurélio</a>
+                    <ul class="submenu-2">
+						<li><a href="https://www.amazon.com.br/gp/product/6555522054/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i0">Meditações</a></li>
+						</li>
+					</ul>
+                </li>
+				<li><a href="#">Sêneca</a>
+                    <ul class="submenu-2">
+						<li><a href="https://www.amazon.com.br/gp/product/8582850506/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i0">Sobre a brevidade...</a></li>
+						<li><a href="https://www.amazon.com.br/gp/product/8525417181/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i1">Aprendendo a viver</a></li>
+						<li><a href="https://www.amazon.com.br/gp/product/8525417548/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i2">Da tranquilidade...</a>
+						</li>
+					</ul>
+                </li>
+			</ul>
+		</li>
+		<li><a href="#"> Racionalismo</a>
+            <ul class="submenu-1">
+				<li><a href="#">René Descartes</a>
+                    <ul class="submenu-2">
+						<li><a href="https://www.amazon.com.br/gp/product/8525410977/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i0">Discurso do método</a></li>
+						<li><a href="https://www.amazon.com.br/gp/product/8533621825/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i1">As Paixões da Alma</a></li>
+						<li><a href="https://www.amazon.com.br/gp/product/8546900191/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i2">Meditações...</a></li>
+					</ul>
+                </li>
+				<li><a href="#">Thomas Hobbes</a>
+                    <ul class="submenu-2">
+						<li><a href="https://www.amazon.com.br/gp/product/B07T86JT8Q/ref=dbs_a_def_rwt_hsch_vapi_tkin_p1_i0">Leviatã</a></li>
+                        <li><a href="https://www.amazon.com.br/gp/product/8572325980/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i3">Do Cidadão</a></li>
+						</li>
+					</ul>
+                </li>
+				<li><a href="#">John Locke</a>
+                    <ul class="submenu-2">
+						<li><a href="https://www.amazon.com.br/Dois-Tratados-Sobre-Governo-Locke/dp/858063380X/ref=sr_1_3?qid=1649858815&refinements=p_27%3AJohn+Locke&s=books&sr=1-3&text=John+Locke&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9">Dois Tratados...</a></li>
+						<li><a href="https://www.amazon.com.br/Carta-sobre-toler%C3%A2ncia-John-Locke/dp/8532660843/ref=sr_1_2?qid=1649858815&refinements=p_27%3AJohn+Locke&s=books&sr=1-2&text=John+Locke">Carta sobre...</a></li>
+						<li><a href="https://www.amazon.com.br/Ensaios-pol%C3%ADticos-John-Locke/dp/8533623585/ref=sr_1_10?qid=1649858815&refinements=p_27%3AJohn+Locke&s=books&sr=1-10&text=John+Locke">Ensaios políticos</a>
+						</li>
+					</ul>
+                </li>
+			</ul>
+        </li>
+		<li><a href="#"> Séc XIX</a>
+            <ul class="submenu-1">
+				<li><a href="#">Schopenhauer</a>
+                    <ul class="submenu-2">
+						<li><a href="https://www.amazon.com.br/Sobre-vontade-na-natureza-1140/dp/8525428884/ref=sr_1_2?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2SLT2WC3LKWRP&keywords=Schopenhauer+sobre+a+vontade&qid=1649859241&s=books&sprefix=schopenhauer+sobre+a+vontade+%2Cstripbooks%2C189&sr=1-2">Sobre a vontade...</a></li>
+						<li><a href="https://www.amazon.com.br/gp/product/8539305623/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i6">O mundo como...</a></li>
+					</ul>
+                </li>
+                <li><a href="#"> Nietzsche</a>
+                    <ul class="submenu-2">
+						<li><a href="https://www.amazon.com.br/gp/product/8535930485/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i0">Assim falou...</a></li>
+						<li><a href="https://www.amazon.com.br/gp/product/8581863752/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i5">O Anticristo</a></li>
+                        <li><a href="https://www.amazon.com.br/gp/product/857232948X/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i4">Além do bem...</a></li>
+                        <li><a href="https://www.amazon.com.br/Ecce-Homo-como-gente-torna-ebook/dp/B00A3DE7WQ/ref=sr_1_7?crid=2VAOL8ESHSF3Y&keywords=ecce+homo&qid=1649859748&sprefix=hecce+%2Caps%2C175&sr=8-7">Ecce homo</a></li>
+					</ul>
+                </li>
+                <li><a href="#"> Karl Marx</a>
+                    <ul class="submenu-2">
+                        <li><a href="https://www.amazon.com.br/gp/product/8563137271/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i0">O capital</a></li>
+                        <li><a href="https://www.amazon.com.br/gp/product/8577430804/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i2">Manifesto do...</a></li>
+                    </ul>
+                </li>
+            </ul> 
+        </li>       
+		<li><a href="#"> Séc XX</a>
+            <ul class="submenu-1">
+				<li><a href="#">Sartre</a>
+                    <ul class="submenu-2">
+						<li><a href="https://www.amazon.com.br/gp/product/853261762X/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i2">Ser e o nada...</a></li>
+						<li><a href="https://www.amazon.com.br/gp/product/6556401382/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i0">A náusea</a></li>
+                        <li><a href="https://www.amazon.com.br/gp/product/6556402184/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i1">O muro</a></li>
+					</ul>
+                </li>
+                <li><a href="#">Freud</a>
+                    <ul class="submenu-2">
+						<li><a href="https://www.amazon.com.br/gp/product/8535926801/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i0">estudos sobre...</a></li>
+						<li><a href="https://www.amazon.com.br/gp/product/8535932216/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i1">A interpretação...</a></li>
+                        <li><a href="https://www.amazon.com.br/gp/product/8535916067/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i2">introdução ao...</a></li>
+					</ul>
+                </li>
+                <li><a href="#">Camus</a>
+                    <ul class="submenu-2">
+						<li><a href="https://www.amazon.com.br/gp/product/8577992691/ref=dbs_a_def_rwt_hsch_vapi_tu00_p1_i0">O mito de Sísifo</a></li>
+						<li><a href="https://www.amazon.com.br/estrangeiro-Albert-Camus/dp/8501014869/ref=sr_1_7?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3QHO4SNWGR0J6&keywords=camus&qid=1649860511&sprefix=camu%2Caps%2C193&sr=8-7">O estrangeiro</a></li>
+                        <li><a href="https://www.amazon.com.br/peste-Nova-Edi%C3%A7%C3%A3o-Albert-Camus/dp/8501111244/ref=pd_sbs_sccl_2/141-0328341-7372244?pd_rd_w=gompJ&pf_rd_p=20649238-c419-4bf5-9e08-457dfd4f5c4c&pf_rd_r=B8FPEZ47EDTQB6NYYCNM&pd_rd_r=b19d9a54-c903-4df9-940f-c122e8d6b04e&pd_rd_wg=o5sMP&pd_rd_i=8501111244&psc=1">A peste</a></li>
+					</ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Recomendações</a>
+            <ul class="submenu-1">
+                <li><a href="https://www.amazon.com.br/Sociedade-do-cansa%C3%A7o-Byung-Chul-Han/dp/8532649963/ref=sr_1_3?keywords=sociedade+do+cansa%C3%A7o&qid=1649860657&s=books&sprefix=sociedade+do+%2Cstripbooks%2C179&sr=1-3">Sociedade do...</a></li>
+                <li><a href="https://www.amazon.com.br/estrangeiro-Albert-Camus/dp/8501014869/ref=sr_1_3?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=24KX6N2UQL3OQ&keywords=o+estrangeiro&qid=1649860702&s=books&sprefix=o+estrangeir%2Cstripbooks%2C179&sr=1-3">O estrangeiro</a></li>
+                <li><a href="https://www.amazon.com.br/dp/8577992691/?coliid=I3AGHWMUHMPK00&colid=2LFJOEK0GCBWB&psc=1&ref_=gv_ov_lig_pi_dp">O mito de Sísifo </a></li>
+                <li><a href="https://www.amazon.com.br/dp/8535928197/?coliid=ICY7RMKHPYWFP&colid=2LFJOEK0GCBWB&psc=1&ref_=gv_ov_lig_pi_dp">Homo Deus</a></li>
+            </ul>
+        </li>
+    </ul>
+    <img src="img/bibliot.webp" alt="">   
+</body>
+</html>
